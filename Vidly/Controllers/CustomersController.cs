@@ -43,11 +43,11 @@ namespace Vidly.Controllers
             }
             else
             {
-                var CustomerInDb = _context.Customers.Single(c => c.Id == customer.Id);
-                CustomerInDb.Name = customer.Name;
-                CustomerInDb.Birthdate = customer.Birthdate;
-                CustomerInDb.MembershipTypeId = customer.MembershipTypeId;
-                CustomerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
             }
             
             _context.SaveChanges();

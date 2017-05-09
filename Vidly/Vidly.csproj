@@ -232,6 +232,14 @@
     <Compile Include="Migrations\201705090400109_PopulateMembershipNames1.Designer.cs">
       <DependentUpon>201705090400109_PopulateMembershipNames1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705090433500_AddedBirthdayToCustomerModel.cs" />
+    <Compile Include="Migrations\201705090433500_AddedBirthdayToCustomerModel.Designer.cs">
+      <DependentUpon>201705090433500_AddedBirthdayToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705090456309_FixedTypoBirthdayToBirthdate.cs" />
+    <Compile Include="Migrations\201705090456309_FixedTypoBirthdayToBirthdate.Designer.cs">
+      <DependentUpon>201705090456309_FixedTypoBirthdayToBirthdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -352,6 +360,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705090400109_PopulateMembershipNames1.resx">
       <DependentUpon>201705090400109_PopulateMembershipNames1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705090433500_AddedBirthdayToCustomerModel.resx">
+      <DependentUpon>201705090433500_AddedBirthdayToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705090456309_FixedTypoBirthdayToBirthdate.resx">
+      <DependentUpon>201705090456309_FixedTypoBirthdayToBirthdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

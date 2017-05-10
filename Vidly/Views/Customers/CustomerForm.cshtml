@@ -23,9 +23,11 @@
         @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
     </div>
     <div class="form-group">
+        @{ Html.EnableClientValidation(false); }
         @Html.LabelFor(m => m.Customer.Birthdate)
-        @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:dd.MM.yyyy}", new { @class = "form-control datepicker" })
+        @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:dd.MM.yyyy}", new {@class = "form-control datepicker"})
         @Html.ValidationMessageFor(m => m.Customer.Birthdate)
+        @{ Html.EnableClientValidation(true); }
     </div>
     <div class="checkbox">
         <label>@Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed to the Newsletter?</label>
@@ -37,3 +39,8 @@
 
 }
 
+ 
+    @section scripts
+    {
+      @Scripts.Render("~/bundles/jqueryval")
+    }

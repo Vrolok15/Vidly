@@ -28,6 +28,7 @@ namespace Vidly.Models
         public DateTime DateAdded { get; set; }
 
         [Required(ErrorMessage = "Please add Movie's Stock Count")]
+        [Range(1, 20, ErrorMessage = "Stock Count should be between 1 and 20")]
         [Display(Name = "Stock Count")]
         public int MovieStockCount { get; set; }
     }

@@ -280,6 +280,10 @@
     <Compile Include="Migrations\201705111025019_SeedUsers.Designer.cs">
       <DependentUpon>201705111025019_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111202427_AddNameToApplicationUser.cs" />
+    <Compile Include="Migrations\201705111202427_AddNameToApplicationUser.Designer.cs">
+      <DependentUpon>201705111202427_AddNameToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -607,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705111025019_SeedUsers.resx">
       <DependentUpon>201705111025019_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111202427_AddNameToApplicationUser.resx">
+      <DependentUpon>201705111202427_AddNameToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

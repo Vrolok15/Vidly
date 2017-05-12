@@ -311,6 +311,10 @@
     <Compile Include="Migrations\201705121623556_FirstRentalMigration.Designer.cs">
       <DependentUpon>201705121623556_FirstRentalMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705121711232_AddedAvailableCopiesToMovie.cs" />
+    <Compile Include="Migrations\201705121711232_AddedAvailableCopiesToMovie.Designer.cs">
+      <DependentUpon>201705121711232_AddedAvailableCopiesToMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -649,6 +653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705121623556_FirstRentalMigration.resx">
       <DependentUpon>201705121623556_FirstRentalMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705121711232_AddedAvailableCopiesToMovie.resx">
+      <DependentUpon>201705121711232_AddedAvailableCopiesToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

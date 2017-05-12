@@ -31,5 +31,8 @@ namespace Vidly.Models
         [Range(1, 20, ErrorMessage = "Stock Count should be between 1 and 20")]
         [Display(Name = "Stock Count")]
         public int MovieStockCount { get; set; }
+
+        [Range(1, 20)]
+        public int AvailableCopies { get; set; }
     }
 }

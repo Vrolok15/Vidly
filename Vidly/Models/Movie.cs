@@ -32,7 +32,6 @@ namespace Vidly.Models
         [Display(Name = "Stock Count")]
         public int MovieStockCount { get; set; }
 
-        [Range(1, 20)]
         public int AvailableCopies { get; set; }
     }
 }

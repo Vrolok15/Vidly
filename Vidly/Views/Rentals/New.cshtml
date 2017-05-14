@@ -13,26 +13,26 @@
             <input id="customer" type="text" value="" class="form-control" />
         </div>
     </div>
+
     <div class="form-group">
-        <label>Movies</label>
+        <label>Movie</label>
         <div class="tt-container">
             <input id="movie" type="text" value="" class="form-control" />
         </div>
     </div>
-    
+
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4">
             <ul id="movies" class="list-group"></ul>
         </div>
     </div>
-    
+
     <button class="btn btn-primary">Submit</button>
 </form>
-
 @section scripts
 {
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             var vm = {
                 movieIds: []
@@ -71,18 +71,18 @@
                 minLength: 3,
                 highlight: true
             }, {
-                    movieName: 'movies',
-                    display: 'name',
-                    source: movies
+                name: 'movies',
+                display: 'name',
+                source: movies
             }).on("typeahead:select", function (e, movie) {
-                    $('#movies').append("<li class='list-group-item'>" + movie.name + "</li>");
+                $("#movies").append("<li class='list-group-item'>" + movie.name + "</li>");
 
-                    $('#movie').typeahead("val", "");
+                $("#movie").typeahead("val", "");
 
-                    vm.movieIds.push(movie.id);
+                vm.movieIds.push(movie.id);
             });
 
-            $('#newRental').submit(function (e) {
+            $("#newRental").submit(function (e) {
                 e.preventDefault();
 
                 $.ajax({
@@ -90,11 +90,11 @@
                         method: "post",
                         data: vm
                     })
-                    .done(function() {
-                        console.log("Done");
+                    .done(function () {
+                        toastr.success("Rentals successfully recorded.");
                     })
-                    .fail(function() {
-                        console.log("Fail");
+                    .fail(function () {
+                        toastr.error("Something unexpected happened.");
                     });
             });
         });

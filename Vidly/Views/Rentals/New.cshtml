@@ -16,6 +16,8 @@
         <input id="movie" type="text" value="" class="form-control" />
     </div>
     
+    <ul id="movies" class="list-group"></ul>
+    
     <button class="btn btn-primary">Submit</button>
 </form>
 
@@ -64,8 +66,13 @@
                     movieName: 'movies',
                     display: 'name',
                     source: movies
-                }).on("typeahead:select", function (e, movie) {
-                });
+            }).on("typeahead:select", function (e, movie) {
+                    $('#movies').append("<li>" + movie.name + "</li>");
+
+                    $('#movie').typeahead("val", "");
+
+                    vm.movieIds.push(movie.Id);
+            });
         });
     </script>
 }

@@ -24,11 +24,12 @@ namespace Vidly.Controllers.Api
         public IHttpActionResult GetMovies(string query = null)
         {
             var moviesQuery = _context.Movies
-                .Include(m => m.Genre);
+                .Include(m => m.Genre)
+                .Where(m => m.AvailableCopies >= 1);
 
             if (!String.IsNullOrWhiteSpace(query))
             {
-                moviesQuery = moviesQuery.Where(c => c.Name.Contains(query));
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
             }
 
             var movieDtos = moviesQuery
